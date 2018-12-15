@@ -80,9 +80,11 @@
     </div>
     
     <script>
+     document.addEventListener("snipcart.ready", function() {
+         $('button').removeClass('disabled');
+     }
       Snipcart.subscribe('cart.ready', function() {
         $('#currency').val(Snipcart.api.getCurrentCurrency());
-        $('button').removeClass('disabled');
       });
       
       Snipcart.subscribe('currency.changed', function (currency) {
