@@ -81,7 +81,7 @@
     
     <script>
      document.addEventListener("snipcart.ready", function() {
-         $('button').removeAttr('disabled');
+         $('.snipcart-add-item').removeAttr('disabled');
      });
       Snipcart.subscribe('cart.ready', function() {
         $('#currency').val(Snipcart.api.getCurrentCurrency());
