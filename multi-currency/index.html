@@ -67,7 +67,7 @@
           Buy our super dummy item in your favorite currency on our basic demo!
         </p>
         <p>
-          <button type="button" class="snipcart-add-item btn btn-primary btn-lg"
+          <button type="button" class="snipcart-add-item btn btn-primary btn-lg disabled"
             data-item-name="Item"
             data-item-price='{"usd": 20.00, "cad": 30.00, "eur": 25.00}'
             data-item-id="ITEM"
@@ -82,6 +82,7 @@
     <script>
       Snipcart.subscribe('cart.ready', function() {
         $('#currency').val(Snipcart.api.getCurrentCurrency());
+        $('button').removeClass('disabled');
       });
       
       Snipcart.subscribe('currency.changed', function (currency) {
